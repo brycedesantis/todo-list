@@ -4,5 +4,4 @@ let addTodoBtn = document.querySelector('#add-todo')
 addTodoBtn.addEventListener('click', () => {
     event.preventDefault()
     displayTodo()
-    console.log('click')
 })

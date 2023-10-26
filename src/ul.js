@@ -1,7 +1,10 @@
+import Storage from "./storage";
 import makeTodo from "./todo";
 
 export default function displayTodo() {
     let todo = makeTodo()
+
+    new Storage().saveLocal(todo)
     
     const todoDisplay = document.querySelector('.todo-display')
     //create div to hold all todo elements
