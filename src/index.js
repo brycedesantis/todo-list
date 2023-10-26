@@ -1,8 +1,8 @@
-import makeTodo from './todo'
+import displayTodo from "./ul"
 
 let addTodoBtn = document.querySelector('#add-todo')
 addTodoBtn.addEventListener('click', () => {
     event.preventDefault()
-    console.log(makeTodo())
+    displayTodo()
     console.log('click')
 })
