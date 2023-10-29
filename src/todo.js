@@ -1,4 +1,5 @@
-import Storage from "./storage"
+import { saveLocal } from "./storage"
+import { ui } from "./ul"
 
 class Todo {
     constructor(title, description, dueDate, priority) {
@@ -16,6 +17,6 @@ export default function makeTodo() {
     let priority = document.querySelector('#form-priority').value
 
     let todo = new Todo(title, description, dueDate, priority)
-    return new Storage().saveLocal(todo)
-    
+    saveLocal(todo)
+    ui.displayTodo()
 }
